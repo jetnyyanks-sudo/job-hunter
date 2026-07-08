@@ -34,6 +34,19 @@ You open Kiro (daily, weekly, whenever)
 
 Pending jobs accumulate across runs — score daily or let them pile up for a weekly review.
 
+## Prerequisites
+
+- **PowerShell 5.1+** (Windows built-in)
+- **Node.js** (for the GitHub MCP server via `npx`)
+- **Kiro Pro** with these MCP servers connected:
+
+| MCP Server | Purpose | Config Location |
+|------------|---------|-----------------|
+| Google Workspace | Send scoring emails via Gmail | User-level (`~/.kiro/settings/mcp.json`) |
+| GitHub | Push code, manage repo | Workspace-level (`.kiro/settings/mcp.json`) |
+
+The Google Workspace MCP is configured at the user level (applies globally). The GitHub MCP is workspace-specific and uses the `GITHUB_JOBHUNTER_PAT` env var for auth.
+
 ## Quick Start
 
 ### 1. Environment Variables
