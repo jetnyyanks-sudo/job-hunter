@@ -1,105 +1,333 @@
-{
-  "_comment": "Generic career page URLs for companies not covered by ATS-specific scrapers. The scraper searches each URL for links matching title_filters from config.json.",
-  "companies": [
-    {"name": "Stripe", "url": "https://stripe.com/jobs/search?query=site+reliability"},
-    {"name": "Dropbox", "url": "https://jobs.dropbox.com/all-jobs?query=site+reliability"},
-    {"name": "Okta", "url": "https://www.okta.com/company/careers/?search=site+reliability+engineer"},
-    {"name": "New Relic", "url": "https://newrelic.careers/en_US/careers/SearchJobs/?search=site+reliability"},
-    {"name": "Fastly", "url": "https://www.fastly.com/about/careers/current-openings?search=reliability"},
-    {"name": "Dynatrace", "url": "https://careers.dynatrace.com/jobs/?search=site+reliability"},
-    {"name": "Splunk", "url": "https://www.splunk.com/en_us/careers/search-jobs.html?keyword=site+reliability"},
-    {"name": "Honeycomb", "url": "https://www.honeycomb.io/careers"},
-    {"name": "LaunchDarkly", "url": "https://launchdarkly.com/careers/"},
-    {"name": "Postman", "url": "https://www.postman.com/company/careers/open-positions/"},
-    {"name": "Atlassian", "url": "https://www.atlassian.com/company/careers/all-jobs?search=site+reliability&location=United+States"},
-    {"name": "Shopify", "url": "https://www.shopify.com/careers/search?keywords=site+reliability"},
-    {"name": "Block", "url": "https://block.xyz/careers?query=site+reliability"},
-    {"name": "Palantir", "url": "https://www.palantir.com/careers/?search=reliability+engineer"},
-    {"name": "Chronosphere", "url": "https://chronosphere.io/careers/"},
-    {"name": "Incident.io", "url": "https://incident.io/careers"},
-    {"name": "FireHydrant", "url": "https://firehydrant.com/careers/"},
-    {"name": "Rootly", "url": "https://rootly.com/careers"},
-    {"name": "Buildkite", "url": "https://buildkite.com/careers"},
-    {"name": "Render", "url": "https://render.com/careers"},
-    {"name": "Fly.io", "url": "https://fly.io/jobs/"},
-    {"name": "Oscar Health", "url": "https://www.hioscar.com/careers/search?query=site+reliability"},
-    {"name": "Devoted Health", "url": "https://jobs.devoted.com/?query=reliability"},
-    {"name": "Ro Health", "url": "https://ro.co/careers/?query=reliability"},
-    {"name": "Cedar", "url": "https://www.cedar.com/careers/"},
-    {"name": "Included Health", "url": "https://www.includedhealth.com/careers"},
-    {"name": "Noom", "url": "https://www.noom.com/careers/"},
-    {"name": "Root Insurance", "url": "https://www.joinroot.com/careers/"},
-    {"name": "Hippo Insurance", "url": "https://www.hippo.com/careers"},
-    {"name": "Coalition", "url": "https://www.coalitioninc.com/careers"},
-    {"name": "AMD", "url": "https://careers.amd.com/careers-home/jobs?keywords=site+reliability&sortBy=relevance"},
-    {"name": "Coralogix", "url": "https://coralogix.com/careers/"},
-    {"name": "Cribl", "url": "https://cribl.io/careers/"},
-    {"name": "Mezmo", "url": "https://www.mezmo.com/careers"},
-    {"name": "Lightstep", "url": "https://lightstep.com/careers"},
-    {"name": "Sumo Logic", "url": "https://www.sumologic.com/company/careers/"},
-    {"name": "ServiceNow", "url": "https://careers.servicenow.com/jobs?keyword=site+reliability+engineer"},
-    {"name": "Palo Alto Networks", "url": "https://jobs.paloaltonetworks.com/en/jobs/?q=site+reliability+engineer"},
-    {"name": "CrowdStrike", "url": "https://www.crowdstrike.com/careers/?search=site+reliability"},
-    {"name": "SentinelOne", "url": "https://www.sentinelone.com/careers/?s=site+reliability"},
-    {"name": "Wiz", "url": "https://www.wiz.io/careers?search=reliability"},
-    {"name": "Snyk", "url": "https://snyk.io/careers/open-positions/?search=reliability"},
-    {"name": "HashiCorp", "url": "https://www.hashicorp.com/careers?query=site+reliability"},
-    {"name": "Canonical", "url": "https://canonical.com/careers?search=site+reliability"},
-    {"name": "Reddit", "url": "https://www.redditinc.com/careers?search=site+reliability"},
-    {"name": "Discord", "url": "https://discord.com/careers?search=site+reliability"},
-    {"name": "Spotify", "url": "https://www.lifeatspotify.com/jobs?query=site+reliability"},
-    {"name": "Twitch", "url": "https://www.twitch.tv/jobs/search?query=site+reliability"},
-    {"name": "Cloudsmith", "url": "https://cloudsmith.com/company/careers"},
-    {"name": "JFrog", "url": "https://jfrog.com/careers/?search=site+reliability"},
-    {"name": "CircleCI", "url": "https://circleci.com/careers/jobs/"},
-    {"name": "Harness", "url": "https://www.harness.io/company/careers?search=reliability"},
-    {"name": "LaunchDarkly", "url": "https://launchdarkly.com/careers/"},
-    {"name": "Nutanix", "url": "https://www.nutanix.com/company/careers?search=site+reliability"},
-    {"name": "Pure Storage", "url": "https://www.purestorage.com/company/careers.html"},
-    {"name": "Rubrik", "url": "https://www.rubrik.com/company/careers?search=site+reliability"},
-    {"name": "Cohesity", "url": "https://www.cohesity.com/company/careers/?search=site+reliability"},
-    {"name": "Cockroach Labs", "url": "https://www.cockroachlabs.com/careers/?search=site+reliability"},
-    {"name": "Timescale", "url": "https://www.timescale.com/careers"},
-    {"name": "PlanetScale", "url": "https://planetscale.com/careers"},
-    {"name": "Neon", "url": "https://neon.tech/careers"},
-    {"name": "Materialize", "url": "https://materialize.com/careers/"},
-    {"name": "SingleStore", "url": "https://www.singlestore.com/careers/"},
-    {"name": "Aiven", "url": "https://aiven.io/careers?search=reliability"},
-    {"name": "Temporal", "url": "https://temporal.io/careers"},
-    {"name": "Kong", "url": "https://konghq.com/careers?search=reliability"},
-    {"name": "Hashnode", "url": "https://hashnode.com/careers"},
-    {"name": "Vercel", "url": "https://vercel.com/careers?search=reliability"},
-    {"name": "Netlify", "url": "https://www.netlify.com/careers/?search=reliability"},
-    {"name": "Cloudflare", "url": "https://www.cloudflare.com/careers/jobs/?search=site+reliability"},
-    {"name": "Tailscale", "url": "https://tailscale.com/careers"},
-    {"name": "Netdata", "url": "https://www.netdata.cloud/careers/"},
-    {"name": "DigitalOcean", "url": "https://www.digitalocean.com/careers?search=site+reliability"},
-    {"name": "Linode (Akamai)", "url": "https://www.linode.com/careers/?search=reliability"},
-    {"name": "Hetzner", "url": "https://www.hetzner.com/company/careers/"},
-    {"name": "Major League Baseball", "url": "https://www.mlb.com/careers/opportunities?search=reliability"},
-    {"name": "Peloton", "url": "https://www.onepeloton.com/careers/search?query=site+reliability"},
-    {"name": "DoorDash", "url": "https://careers.doordash.com/search/?query=site+reliability"},
-    {"name": "Instacart", "url": "https://instacart.careers/?search=site+reliability"},
-    {"name": "Lyft", "url": "https://www.lyft.com/careers?search=site+reliability"},
-    {"name": "Pinterest", "url": "https://www.pinterestcareers.com/jobs/?search=site+reliability"},
-    {"name": "Zillow", "url": "https://www.zillow.com/careers/search/?search=site+reliability"},
-    {"name": "Redfin", "url": "https://www.redfin.com/about/jobs?search=site+reliability"},
-    {"name": "Toast", "url": "https://careers.toasttab.com/jobs?query=site+reliability"},
-    {"name": "Brex", "url": "https://www.brex.com/careers?search=reliability"},
-    {"name": "Marqeta", "url": "https://www.marqeta.com/careers?search=reliability"},
-    {"name": "Plaid", "url": "https://plaid.com/careers/?search=reliability"},
-    {"name": "Adyen", "url": "https://careers.adyen.com/vacancies?search=site+reliability"},
-    {"name": "Circle", "url": "https://www.circle.com/en/careers?search=reliability"},
-    {"name": "Chainalysis", "url": "https://www.chainalysis.com/careers/?search=reliability"},
-    {"name": "Ripple", "url": "https://ripple.com/careers/?search=reliability"},
-    {"name": "Figma", "url": "https://www.figma.com/careers/?search=reliability"},
-    {"name": "Canva", "url": "https://www.canva.com/careers/?search=reliability"},
-    {"name": "Notion", "url": "https://www.notion.so/careers?search=reliability"},
-    {"name": "Linear", "url": "https://linear.app/careers"},
-    {"name": "Asana", "url": "https://asana.com/jobs?search=reliability"},
-    {"name": "Monday.com", "url": "https://monday.com/careers?search=reliability"},
-    {"name": "GitLab", "url": "https://about.gitlab.com/jobs/?search=site+reliability"},
-    {"name": "Sourcegraph", "url": "https://sourcegraph.com/careers?search=reliability"},
-    {"name": "Grafana Labs", "url": "https://grafana.com/about/careers/?search=site+reliability"}
-  ]
+﻿{
+    "companies":  [
+                      {
+                          "name":  "Stripe",
+                          "url":  "https://stripe.com/jobs/search?query=site+reliability"
+                      },
+                      {
+                          "name":  "Dropbox",
+                          "url":  "https://jobs.dropbox.com/all-jobs?query=site+reliability"
+                      },
+                      {
+                          "name":  "Okta",
+                          "url":  "https://www.okta.com/company/careers/?search=site+reliability+engineer"
+                      },
+                      {
+                          "name":  "New Relic",
+                          "url":  "https://newrelic.careers/en_US/careers/SearchJobs/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Fastly",
+                          "url":  "https://www.fastly.com/about/careers/current-openings?search=reliability"
+                      },
+                      {
+                          "name":  "Dynatrace",
+                          "url":  "https://www.dynatrace.com/careers/jobs/?query=site+reliability"
+                      },
+                      {
+                          "name":  "Splunk",
+                          "url":  "https://www.splunk.com/en_us/careers/search-jobs.html?keyword=site+reliability"
+                      },
+                      {
+                          "name":  "Honeycomb",
+                          "url":  "https://www.honeycomb.io/careers"
+                      },
+                      {
+                          "name":  "LaunchDarkly",
+                          "url":  "https://launchdarkly.com/careers/"
+                      },
+                      {
+                          "name":  "Postman",
+                          "url":  "https://www.postman.com/company/careers/open-positions/"
+                      },
+                      {
+                          "name":  "Atlassian",
+                          "url":  "https://www.atlassian.com/company/careers/all-jobs?search=site+reliability\u0026location=United+States"
+                      },
+                      {
+                          "name":  "Shopify",
+                          "url":  "https://www.shopify.com/careers/search?keywords=site+reliability"
+                      },
+                      {
+                          "name":  "Block",
+                          "url":  "https://block.xyz/careers?query=site+reliability"
+                      },
+                      {
+                          "name":  "Palantir",
+                          "url":  "https://www.palantir.com/careers/?search=reliability+engineer"
+                      },
+                      {
+                          "name":  "Chronosphere",
+                          "url":  "https://chronosphere.io/careers/"
+                      },
+                      {
+                          "name":  "Incident.io",
+                          "url":  "https://incident.io/careers"
+                      },
+                      {
+                          "name":  "FireHydrant",
+                          "url":  "https://firehydrant.com/careers/"
+                      },
+                      {
+                          "name":  "Rootly",
+                          "url":  "https://rootly.com/careers"
+                      },
+                      {
+                          "name":  "Buildkite",
+                          "url":  "https://buildkite.com/careers"
+                      },
+                      {
+                          "name":  "Render",
+                          "url":  "https://render.com/careers"
+                      },
+                      {
+                          "name":  "Fly.io",
+                          "url":  "https://fly.io/jobs/"
+                      },
+                      {
+                          "name":  "Oscar Health",
+                          "url":  "https://www.hioscar.com/careers/search?query=site+reliability"
+                      },
+                      {
+                          "name":  "Ro Health",
+                          "url":  "https://ro.co/careers/?query=reliability"
+                      },
+                      {
+                          "name":  "Cedar",
+                          "url":  "https://www.cedar.com/careers/"
+                      },
+                      {
+                          "name":  "Included Health",
+                          "url":  "https://www.includedhealth.com/careers"
+                      },
+                      {
+                          "name":  "Noom",
+                          "url":  "https://www.noom.com/careers/"
+                      },
+                      {
+                          "name":  "Root Insurance",
+                          "url":  "https://www.joinroot.com/careers/"
+                      },
+                      {
+                          "name":  "Hippo Insurance",
+                          "url":  "https://www.hippo.com/careers"
+                      },
+                      {
+                          "name":  "Coalition",
+                          "url":  "https://www.coalitioninc.com/careers"
+                      },
+                      {
+                          "name":  "AMD",
+                          "url":  "https://careers.amd.com/careers-home/jobs?keywords=site+reliability\u0026sortBy=relevance"
+                      },
+                      {
+                          "name":  "Coralogix",
+                          "url":  "https://coralogix.com/careers/"
+                      },
+                      {
+                          "name":  "Cribl",
+                          "url":  "https://cribl.io/careers/"
+                      },
+                      {
+                          "name":  "Mezmo",
+                          "url":  "https://www.mezmo.com/careers"
+                      },
+                      {
+                          "name":  "Sumo Logic",
+                          "url":  "https://www.sumologic.com/company/careers/"
+                      },
+                      {
+                          "name":  "CrowdStrike",
+                          "url":  "https://www.crowdstrike.com/careers/?search=site+reliability"
+                      },
+                      {
+                          "name":  "SentinelOne",
+                          "url":  "https://www.sentinelone.com/careers/?s=site+reliability"
+                      },
+                      {
+                          "name":  "Wiz",
+                          "url":  "https://www.wiz.io/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Canonical",
+                          "url":  "https://canonical.com/careers?search=site+reliability"
+                      },
+                      {
+                          "name":  "Reddit",
+                          "url":  "https://www.redditinc.com/careers?search=site+reliability"
+                      },
+                      {
+                          "name":  "Discord",
+                          "url":  "https://discord.com/careers?search=site+reliability"
+                      },
+                      {
+                          "name":  "Spotify",
+                          "url":  "https://www.lifeatspotify.com/jobs?query=site+reliability"
+                      },
+                      {
+                          "name":  "Twitch",
+                          "url":  "https://www.twitch.tv/jobs/search?query=site+reliability"
+                      },
+                      {
+                          "name":  "Cloudsmith",
+                          "url":  "https://cloudsmith.com/company/careers"
+                      },
+                      {
+                          "name":  "CircleCI",
+                          "url":  "https://circleci.com/careers/jobs/"
+                      },
+                      {
+                          "name":  "Harness",
+                          "url":  "https://www.harness.io/company/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Nutanix",
+                          "url":  "https://www.nutanix.com/company/careers?search=site+reliability"
+                      },
+                      {
+                          "name":  "Pure Storage",
+                          "url":  "https://www.purestorage.com/company/careers.html"
+                      },
+                      {
+                          "name":  "Cohesity",
+                          "url":  "https://www.cohesity.com/company/careers/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Cockroach Labs",
+                          "url":  "https://www.cockroachlabs.com/careers/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Timescale",
+                          "url":  "https://www.timescale.com/careers"
+                      },
+                      {
+                          "name":  "PlanetScale",
+                          "url":  "https://planetscale.com/careers"
+                      },
+                      {
+                          "name":  "Neon",
+                          "url":  "https://neon.tech/careers"
+                      },
+                      {
+                          "name":  "Materialize",
+                          "url":  "https://materialize.com/careers/"
+                      },
+                      {
+                          "name":  "SingleStore",
+                          "url":  "https://www.singlestore.com/careers/"
+                      },
+                      {
+                          "name":  "Aiven",
+                          "url":  "https://aiven.io/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Temporal",
+                          "url":  "https://temporal.io/careers"
+                      },
+                      {
+                          "name":  "Kong",
+                          "url":  "https://konghq.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Hashnode",
+                          "url":  "https://hashnode.com/careers"
+                      },
+                      {
+                          "name":  "Vercel",
+                          "url":  "https://vercel.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Netlify",
+                          "url":  "https://www.netlify.com/careers/?search=reliability"
+                      },
+                      {
+                          "name":  "Cloudflare",
+                          "url":  "https://www.cloudflare.com/careers/jobs/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Tailscale",
+                          "url":  "https://tailscale.com/careers"
+                      },
+                      {
+                          "name":  "DigitalOcean",
+                          "url":  "https://www.digitalocean.com/careers?search=site+reliability"
+                      },
+                      {
+                          "name":  "Major League Baseball",
+                          "url":  "https://www.mlb.com/careers/opportunities?search=reliability"
+                      },
+                      {
+                          "name":  "DoorDash",
+                          "url":  "https://careers.doordash.com/search/?query=site+reliability"
+                      },
+                      {
+                          "name":  "Instacart",
+                          "url":  "https://instacart.careers/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Redfin",
+                          "url":  "https://www.redfin.com/about/jobs?search=site+reliability"
+                      },
+                      {
+                          "name":  "Brex",
+                          "url":  "https://www.brex.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Marqeta",
+                          "url":  "https://www.marqeta.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Plaid",
+                          "url":  "https://plaid.com/careers/?search=reliability"
+                      },
+                      {
+                          "name":  "Adyen",
+                          "url":  "https://careers.adyen.com/vacancies?search=site+reliability"
+                      },
+                      {
+                          "name":  "Circle",
+                          "url":  "https://www.circle.com/en/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Chainalysis",
+                          "url":  "https://www.chainalysis.com/careers/?search=reliability"
+                      },
+                      {
+                          "name":  "Ripple",
+                          "url":  "https://ripple.com/careers/?search=reliability"
+                      },
+                      {
+                          "name":  "Figma",
+                          "url":  "https://www.figma.com/careers/?search=reliability"
+                      },
+                      {
+                          "name":  "Notion",
+                          "url":  "https://www.notion.so/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Linear",
+                          "url":  "https://linear.app/careers"
+                      },
+                      {
+                          "name":  "Asana",
+                          "url":  "https://asana.com/jobs?search=reliability"
+                      },
+                      {
+                          "name":  "Monday.com",
+                          "url":  "https://monday.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "GitLab",
+                          "url":  "https://about.gitlab.com/jobs/?search=site+reliability"
+                      },
+                      {
+                          "name":  "Sourcegraph",
+                          "url":  "https://sourcegraph.com/careers?search=reliability"
+                      },
+                      {
+                          "name":  "Grafana Labs",
+                          "url":  "https://grafana.com/about/careers/?search=site+reliability"
+                      }
+                  ],
+    "_comment":  "Generic career page URLs for companies not covered by ATS-specific scrapers. The scraper searches each URL for links matching title_filters from config.json."
 }
