@@ -168,6 +168,16 @@ This works regardless of what ATS the company uses. The scraper searches the pag
 
 If the ATS is supported (Greenhouse, Lever, Ashby, SmartRecruiters), add the slug to `config.json`. Otherwise, add the careers URL to `career_pages.json`.
 
+### Validating career page URLs
+
+Career page URLs break over time (companies redesign, get acquired, add bot protection). Run the validator periodically:
+
+```powershell
+.\Test-CareerPages.ps1
+```
+
+This hits every URL in `career_pages.json` and reports which ones are broken (404, DNS failure, bot-blocked) so you can fix or remove them.
+
 ## Email Setup
 
 Email is sent through Gmail via Kiro's Google Workspace MCP. No SMTP credentials or app passwords needed.
@@ -191,6 +201,7 @@ The job database auto-prunes on every run:
 job-hunter/
 ├── Run-JobHunter.ps1           # Main scraper (runs on schedule)
 ├── Find-CompanyATS.ps1         # Utility: detect a company's ATS
+├── Test-CareerPages.ps1        # Utility: validate career page URLs
 ├── Send-PendingEmail.ps1       # Shows pending email status
 ├── config.json                 # ATS company list + profile settings
 ├── career_pages.json           # Generic career page URLs (any ATS)
