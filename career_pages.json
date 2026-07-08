@@ -1,0 +1,165 @@
+{
+  "_comment": "Generic career page URLs - companies not covered by ATS-specific scrapers. Add any company careers search URL here.",
+  "companies": [
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com/jobs/search?query=site+reliability"
+    },
+    {
+      "name": "Dropbox",
+      "url": "https://jobs.dropbox.com/all-jobs?query=site+reliability"
+    },
+    {
+      "name": "Okta",
+      "url": "https://www.okta.com/company/careers/?search=site+reliability+engineer"
+    },
+    {
+      "name": "New Relic",
+      "url": "https://newrelic.careers/en_US/careers/SearchJobs/?search=site+reliability"
+    },
+    {
+      "name": "Sumo Logic",
+      "url": "https://www.sumologic.com/company/careers/"
+    },
+    {
+      "name": "HashiCorp",
+      "url": "https://www.hashicorp.com/career?query=site+reliability"
+    },
+    {
+      "name": "Fastly",
+      "url": "https://www.fastly.com/about/careers/current-openings?search=reliability"
+    },
+    {
+      "name": "Dynatrace",
+      "url": "https://careers.dynatrace.com/jobs/?search=site+reliability"
+    },
+    {
+      "name": "Splunk",
+      "url": "https://www.splunk.com/en_us/careers/search-jobs.html?keyword=site+reliability"
+    },
+    {
+      "name": "PagerDuty",
+      "url": "https://careers.pagerduty.com/jobs/search?query=site+reliability"
+    },
+    {
+      "name": "Honeycomb",
+      "url": "https://www.honeycomb.io/careers"
+    },
+    {
+      "name": "LaunchDarkly",
+      "url": "https://launchdarkly.com/careers/"
+    },
+    {
+      "name": "CircleCI",
+      "url": "https://circleci.com/careers/jobs/"
+    },
+    {
+      "name": "Postman",
+      "url": "https://www.postman.com/company/careers/open-positions/"
+    },
+    {
+      "name": "Atlassian",
+      "url": "https://www.atlassian.com/company/careers/all-jobs?search=site+reliability&location=United+States"
+    },
+    {
+      "name": "Shopify",
+      "url": "https://www.shopify.com/careers/search?keywords=site+reliability"
+    },
+    {
+      "name": "Block",
+      "url": "https://block.xyz/careers?query=site+reliability"
+    },
+    {
+      "name": "Palantir",
+      "url": "https://www.palantir.com/careers/?search=reliability+engineer"
+    },
+    {
+      "name": "Cloudsmith",
+      "url": "https://cloudsmith.com/company/careers"
+    },
+    {
+      "name": "Chronosphere",
+      "url": "https://chronosphere.io/careers/"
+    },
+    {
+      "name": "Lightstep",
+      "url": "https://lightstep.com/careers"
+    },
+    {
+      "name": "Incident.io",
+      "url": "https://incident.io/careers"
+    },
+    {
+      "name": "FireHydrant",
+      "url": "https://firehydrant.com/careers/"
+    },
+    {
+      "name": "Blameless",
+      "url": "https://www.blameless.com/careers"
+    },
+    {
+      "name": "Rootly",
+      "url": "https://rootly.com/careers"
+    },
+    {
+      "name": "Jeli",
+      "url": "https://www.jeli.io/careers"
+    },
+    {
+      "name": "Buildkite",
+      "url": "https://buildkite.com/careers"
+    },
+    {
+      "name": "Render",
+      "url": "https://render.com/careers"
+    },
+    {
+      "name": "Fly.io",
+      "url": "https://fly.io/jobs/"
+    },
+    {
+      "name": "Railway",
+      "url": "https://railway.app/careers"
+    },
+    {
+      "name": "Oscar Health",
+      "url": "https://www.hioscar.com/careers/search?query=site+reliability"
+    },
+    {
+      "name": "Devoted Health",
+      "url": "https://jobs.devoted.com/?query=reliability"
+    },
+    {
+      "name": "Ro Health",
+      "url": "https://ro.co/careers/?query=reliability"
+    },
+    {
+      "name": "Cedar",
+      "url": "https://www.cedar.com/careers/"
+    },
+    {
+      "name": "Included Health",
+      "url": "https://www.includedhealth.com/careers"
+    },
+    {
+      "name": "Noom",
+      "url": "https://www.noom.com/careers/"
+    },
+    {
+      "name": "Root Insurance",
+      "url": "https://www.joinroot.com/careers/"
+    },
+    {
+      "name": "Hippo Insurance",
+      "url": "https://www.hippo.com/careers"
+    },
+    {
+      "name": "Coalition",
+      "url": "https://www.coalitioninc.com/careers"
+    },
+    {
+      "name": "Lemonade",
+      "url": "https://www.lemonade.com/careers"
+    }
+  ]
+}

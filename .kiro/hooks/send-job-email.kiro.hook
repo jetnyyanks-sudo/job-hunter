@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Send Job Hunter Email",
+  "description": "After the job hunter script generates a pending email, this hook prompts the agent to send it via Gmail MCP.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Read the file data/pending_email.json in the job-hunter project. If it exists, send the email using the Google Workspace MCP send_gmail_message tool with the subject, to address, and body_html from the payload. Use body_format html. After sending successfully, delete the pending_email.json file."
+  }
+}

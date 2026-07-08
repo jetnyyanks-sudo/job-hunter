@@ -1,0 +1,175 @@
+{
+  "profile": {
+    "title": "Principal Site Reliability Engineer",
+    "skills": ["Dynatrace", "Terraform", "PagerDuty", "Azure DevOps", "PowerShell", "Observability", "SRE", "Monitoring", "Infrastructure as Code", "CI/CD", "Incident Management"],
+    "level": "Principal",
+    "acceptable_levels": ["Principal", "Staff", "Senior"],
+    "minimum_salary": 180000,
+    "summary": "Principal SRE with deep expertise in Dynatrace, Terraform, PagerDuty, Azure DevOps, PowerShell, and observability. Strong background in building reliable systems at scale, incident management, and infrastructure automation."
+  },
+  "search_keywords": [
+    "Site Reliability Engineer",
+    "SRE",
+    "Reliability Engineer",
+    "Platform Reliability",
+    "Production Engineer"
+  ],
+  "title_filters": [
+    "Site Reliability",
+    "SRE",
+    "Reliability Engineer",
+    "Platform Engineer",
+    "Production Engineer"
+  ],
+  "level_filters": [
+    "Principal",
+    "Staff",
+    "Senior",
+    "Lead"
+  ],
+  "exclude_keywords": [
+    "Junior",
+    "Associate",
+    "Intern",
+    "Entry Level"
+  ],
+  "location_filters": [
+    "Remote",
+    "United States",
+    "US",
+    "Anywhere"
+  ],
+  "scoring": {
+    "apply_threshold": 85,
+    "method": "kiro"
+  },
+  "notifications": {
+    "enabled": true,
+    "gmail_address": "jetnyyanks@gmail.com",
+    "method": "mcp"
+  },
+  "companies": {
+    "greenhouse": [
+      "cloudflare",
+      "elastic",
+      "cockroachlabs",
+      "dynatrace",
+      "pagerduty",
+      "grafana",
+      "snyk",
+      "hubspot",
+      "duolingo",
+      "coinbase",
+      "squarespace",
+      "twilio",
+      "doordash",
+      "pinterest",
+      "roku",
+      "docusign",
+      "airtable",
+      "brex",
+      "gusto",
+      "toast",
+      "plaid",
+      "zscaler",
+      "crowdstrike",
+      "clickhouse",
+      "anthropic",
+      "databricks",
+      "confluent",
+      "snowflake",
+      "glean",
+      "drata",
+      "navan",
+      "ironclad",
+      "webflow",
+      "figma",
+      "cloverhealth",
+      "employerdirecthealthcare",
+      "elliginthealth",
+      "oscarhealth",
+      "devoted",
+      "florencehc",
+      "enova"
+    ],
+    "lever": [
+      "netflix",
+      "anduril",
+      "verkada",
+      "samsara",
+      "tanium",
+      "fivetran",
+      "nerdwallet",
+      "benchling",
+      "lacework",
+      "upstart",
+      "labelbox",
+      "filevine",
+      "cribl",
+      "cockroach-labs",
+      "moveworks",
+      "ro",
+      "devoted"
+    ],
+    "ashby": [
+      "ramp",
+      "notion",
+      "linear",
+      "vercel",
+      "retool",
+      "dbt-labs",
+      "vanta",
+      "alphasense",
+      "writer",
+      "baseten",
+      "blackpoint cyber",
+      "assured",
+      "lime",
+      "livekit",
+      "fluidstack"
+    ],
+    "smartrecruiters": [
+      "visa",
+      "bosch",
+      "equinix",
+      "collibra",
+      "linkedin"
+    ],
+    "workday": [
+      {
+        "name": "Salesforce",
+        "url": "https://careers.salesforce.com/en/jobs/?search=site+reliability+engineer&location=United+States&pagesize=20"
+      },
+      {
+        "name": "Capital One",
+        "url": "https://www.capitalonecareers.com/search-jobs/site%20reliability/234/1"
+      },
+      {
+        "name": "Intuit",
+        "url": "https://jobs.intuit.com/search-jobs/site%20reliability/27595/1"
+      },
+      {
+        "name": "ServiceNow",
+        "url": "https://careers.servicenow.com/jobs/search?q=site+reliability+engineer&location=United+States"
+      },
+      {
+        "name": "Palo Alto Networks",
+        "url": "https://jobs.paloaltonetworks.com/en/jobs/?q=site+reliability+engineer&location=United+States"
+      },
+      {
+        "name": "Splunk",
+        "url": "https://jobs.jobvite.com/splunk-careers/search?q=site+reliability+engineer&l=United+States"
+      }
+    ],
+    "icims": [
+      {
+        "name": "Target",
+        "url": "https://jobs.target.com/search-jobs/site%20reliability"
+      },
+      {
+        "name": "SAIC",
+        "url": "https://jobs.saic.com/search-jobs/site%20reliability"
+      }
+    ]
+  }
+}

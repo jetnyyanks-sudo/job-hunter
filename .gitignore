@@ -1,0 +1,14 @@
+# Personal data - never commit
+resume.md
+Luke_Calderone_Resume.pdf
+data/
+
+# Reports (generated, personal)
+reports/
+
+# Environment/config with personal info
+# Uncomment if you want to keep config private:
+# config.json
+
+# Temporary/validation files
+validate.ps1
