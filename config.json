@@ -45,7 +45,7 @@
   },
   "notifications": {
     "enabled": true,
-    "gmail_address": "jetnyyanks@gmail.com",
+    "gmail_address_env": "JOBHUNTER_GMAIL",
     "method": "mcp"
   },
   "companies": {

@@ -37,10 +37,15 @@ You open Kiro
 
 Edit `config.json`:
 
-- Set your Gmail address in `notifications.gmail_address`
 - Add/remove companies from each ATS section
 - Adjust `profile` to match your background and skills
 - Adjust `title_filters` and `exclude_keywords` as needed
+
+Set environment variables:
+```powershell
+# Required for email notifications
+[Environment]::SetEnvironmentVariable("JOBHUNTER_GMAIL", "your-email@gmail.com", "User")
+```
 
 ### 2. Run the scraper
 
@@ -139,7 +144,14 @@ If the ATS is supported (Greenhouse, Lever, Ashby, SmartRecruiters), add the slu
 
 ## Email Setup
 
-Email is sent through your Gmail account via Kiro's Google Workspace MCP integration. No SMTP credentials needed — just set your Gmail address in config.json and make sure the Google Workspace MCP is connected in Kiro.
+Email is sent through your Gmail account via Kiro's Google Workspace MCP integration. No SMTP credentials needed.
+
+Set the environment variable with your Gmail address:
+```powershell
+[Environment]::SetEnvironmentVariable("JOBHUNTER_GMAIL", "your-email@gmail.com", "User")
+```
+
+Make sure the Google Workspace MCP is connected in Kiro.
 
 ## File Structure
 

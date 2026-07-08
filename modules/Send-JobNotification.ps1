@@ -32,7 +32,21 @@ function Send-JobNotification {
         return
     }
 
-    $gmailAddress = $NotificationConfig.gmail_address
+    $gmailAddress = if ($NotificationConfig.gmail_address) {
+        $NotificationConfig.gmail_address
+    }
+    elseif ($NotificationConfig.gmail_address_env) {
+        $envVal = [Environment]::GetEnvironmentVariable($NotificationConfig.gmail_address_env)
+        if (-not $envVal) {
+            Write-Warning "Environment variable '$($NotificationConfig.gmail_address_env)' not set. Cannot send notification."
+            return
+        }
+        $envVal
+    }
+    else {
+        Write-Warning "No gmail_address or gmail_address_env configured. Cannot send notification."
+        return
+    }
 
     # Build HTML email body
     $jobRows = ""

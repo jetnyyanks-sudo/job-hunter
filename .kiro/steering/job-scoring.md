@@ -49,9 +49,10 @@ After writing scored results, **delete `data/pending_scoring.json`** to clear th
 After scoring:
 - Read `modules/Export-HtmlReport.ps1` and generate an HTML report to `reports/report_YYYY-MM-DD.html`
 - Prepare and send an email notification via Gmail MCP that includes:
+  - Read the Gmail address from environment variable `JOBHUNTER_GMAIL`
   - **Apply Today** jobs (score 85+) with full details: title, company, location, score, reasoning, salary estimate, and clickable application link
   - **Worth Looking** jobs (score 70-84) as a condensed list with title, company, score, and clickable link
-- The email goes to the Gmail address in config.json
+- The email goes to and from the Gmail address in the env var
 
 ## 6. Present summary
 
