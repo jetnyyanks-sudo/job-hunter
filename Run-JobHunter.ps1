@@ -76,10 +76,11 @@ Write-Host "`n🔍 Scraping job boards...`n" -ForegroundColor Green
 $allJobs = @()
 $titleFilters = $config.title_filters
 $isVerbose = $VerbosePreference -eq "Continue"
+$scrapeStart = Get-Date
 
 # --- Greenhouse ---
 if ($config.companies.greenhouse -and $config.companies.greenhouse.Count -gt 0) {
-    Write-Host "  🌿 Greenhouse ($($config.companies.greenhouse.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🌿 Greenhouse ($($config.companies.greenhouse.Count) companies)..." -ForegroundColor White
     $ghJobs = Get-GreenhouseJobs -Companies $config.companies.greenhouse -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $ghJobs
     Write-Host "     Found: $($ghJobs.Count) matching jobs" -ForegroundColor Gray
@@ -87,7 +88,7 @@ if ($config.companies.greenhouse -and $config.companies.greenhouse.Count -gt 0) 
 
 # --- Lever ---
 if ($config.companies.lever -and $config.companies.lever.Count -gt 0) {
-    Write-Host "  🔧 Lever ($($config.companies.lever.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🔧 Lever ($($config.companies.lever.Count) companies)..." -ForegroundColor White
     $leverJobs = Get-LeverJobs -Companies $config.companies.lever -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $leverJobs
     Write-Host "     Found: $($leverJobs.Count) matching jobs" -ForegroundColor Gray
@@ -95,7 +96,7 @@ if ($config.companies.lever -and $config.companies.lever.Count -gt 0) {
 
 # --- Ashby ---
 if ($config.companies.ashby -and $config.companies.ashby.Count -gt 0) {
-    Write-Host "  📋 Ashby ($($config.companies.ashby.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 📋 Ashby ($($config.companies.ashby.Count) companies)..." -ForegroundColor White
     $ashbyJobs = Get-AshbyJobs -Companies $config.companies.ashby -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $ashbyJobs
     Write-Host "     Found: $($ashbyJobs.Count) matching jobs" -ForegroundColor Gray
@@ -103,7 +104,7 @@ if ($config.companies.ashby -and $config.companies.ashby.Count -gt 0) {
 
 # --- SmartRecruiters ---
 if ($config.companies.smartrecruiters -and $config.companies.smartrecruiters.Count -gt 0) {
-    Write-Host "  🧠 SmartRecruiters ($($config.companies.smartrecruiters.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🧠 SmartRecruiters ($($config.companies.smartrecruiters.Count) companies)..." -ForegroundColor White
     $srJobs = Get-SmartRecruiterJobs -Companies $config.companies.smartrecruiters -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $srJobs
     Write-Host "     Found: $($srJobs.Count) matching jobs" -ForegroundColor Gray
@@ -111,7 +112,7 @@ if ($config.companies.smartrecruiters -and $config.companies.smartrecruiters.Cou
 
 # --- Workday ---
 if ($config.companies.workday -and $config.companies.workday.Count -gt 0) {
-    Write-Host "  💼 Workday ($($config.companies.workday.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 💼 Workday ($($config.companies.workday.Count) companies)..." -ForegroundColor White
     $wdJobs = Get-WorkdayJobs -Companies $config.companies.workday -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $wdJobs
     Write-Host "     Found: $($wdJobs.Count) matching jobs" -ForegroundColor Gray
@@ -119,7 +120,7 @@ if ($config.companies.workday -and $config.companies.workday.Count -gt 0) {
 
 # --- iCIMS ---
 if ($config.companies.icims -and $config.companies.icims.Count -gt 0) {
-    Write-Host "  🏢 iCIMS ($($config.companies.icims.Count) companies)..." -ForegroundColor White
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🏢 iCIMS ($($config.companies.icims.Count) companies)..." -ForegroundColor White
     $icimsJobs = Get-ICIMSJobs -Companies $config.companies.icims -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $icimsJobs
     Write-Host "     Found: $($icimsJobs.Count) matching jobs" -ForegroundColor Gray
@@ -130,7 +131,7 @@ $careerPagesPath = "$scriptRoot\career_pages.json"
 if (Test-Path $careerPagesPath) {
     $careerPages = (Get-Content -Path $careerPagesPath -Raw | ConvertFrom-Json).companies
     if ($careerPages -and $careerPages.Count -gt 0) {
-        Write-Host "  🌐 Career Pages ($($careerPages.Count) companies)..." -ForegroundColor White
+        Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🌐 Career Pages ($($careerPages.Count) companies)..." -ForegroundColor White
         $cpJobs = Get-CareerPageJobs -Companies $careerPages -TitleFilters $titleFilters -Verbose:$isVerbose
         $allJobs += $cpJobs
         Write-Host "     Found: $($cpJobs.Count) matching jobs" -ForegroundColor Gray
