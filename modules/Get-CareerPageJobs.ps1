@@ -195,8 +195,8 @@ function Get-CareerPageJobs {
             Write-Warning "Failed to fetch career page for $companyName : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
-        # Be polite - 2s between companies (HTML scraping)
-        Start-Sleep -Seconds 2
+        # Brief pause between different domains
+        Start-Sleep -Milliseconds 500
     }
 
     return $allJobs
