@@ -194,6 +194,12 @@
         "tenant": "nba",
         "server": "wd108",
         "site": "nbacareers"
+      },
+      {
+        "name": "Stord",
+        "tenant": "stord",
+        "server": "wd503",
+        "site": "Stord_External_Career"
       }
     ],
     "icims": []
