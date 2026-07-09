@@ -176,6 +176,12 @@
         "tenant": "workday",
         "server": "wd5",
         "site": "Workday"
+      },
+      {
+        "name": "WEX",
+        "tenant": "wexinc",
+        "server": "wd5",
+        "site": "wexinc"
       }
     ],
     "icims": []
