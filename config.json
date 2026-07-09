@@ -170,6 +170,12 @@
         "tenant": "healthcare",
         "server": "wd1",
         "site": "Search"
+      },
+      {
+        "name": "Workday",
+        "tenant": "workday",
+        "server": "wd5",
+        "site": "Workday"
       }
     ],
     "icims": []
