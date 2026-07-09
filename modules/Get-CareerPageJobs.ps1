@@ -31,7 +31,7 @@ function Get-CareerPageJobs {
         Write-Host "     [$($Companies.IndexOf($companyConfig) + 1)/$($Companies.Count)] $companyName..." -ForegroundColor DarkGray -NoNewline
 
         try {
-            $response = Invoke-WebRequest -Uri $url -Headers $headers -UseBasicParsing -TimeoutSec 8 -MaximumRedirection 5 -ErrorAction Stop
+            $response = Invoke-WebRequest -Uri $url -Headers $headers -UseBasicParsing -TimeoutSec 5 -MaximumRedirection 5 -ErrorAction Stop
             $content = $response.Content
 
             # Strategy 1: Find job links by matching title keywords in anchor text
