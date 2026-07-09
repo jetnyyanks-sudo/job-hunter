@@ -41,30 +41,14 @@ function Get-AshbyJobs {
                 $location = if ($job.location) { $job.location } else { "Not specified" }
                 if ($job.isRemote) { $location = "Remote - $location" }
 
-                # Get job details for description (may fail silently on some boards)
-                $description = ""
-                $detailUrl = "https://api.ashbyhq.com/posting-api/job-board/$company/posting/$($job.id)"
-                try {
-                    $detail = Invoke-RestMethod -Uri $detailUrl -Method Get -ErrorAction SilentlyContinue
-                    if ($detail -and $detail.descriptionHtml) {
-                        $description = ($detail.descriptionHtml -replace '<[^>]+>', ' ' -replace '\s+', ' ')
-                        $description = $description.Substring(0, [Math]::Min(2000, $description.Length))
-                    }
-                    else {
-                        $description = $job.title
-                    }
-                }
-                catch {
-                    $description = $job.title
-                }
+                # Build description from listing data (detail endpoint requires auth)
+                $description = "$($job.title) at $company"
+                if ($location) { $description += " | $location" }
 
                 # Extract salary
                 $salary = ""
                 if ($job.compensation) {
                     $salary = $job.compensation
-                }
-                elseif ($description -match '\$[\d,]+\s*[-–]\s*\$[\d,]+') {
-                    $salary = $Matches[0]
                 }
 
                 $jobUrl = "https://jobs.ashbyhq.com/$company/$($job.id)"
@@ -80,8 +64,6 @@ function Get-AshbyJobs {
                     Salary      = $salary
                     JobId       = "ashby_${company}_$($job.id)"
                 }
-
-                Start-Sleep -Milliseconds 300
             }
 
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $company"
