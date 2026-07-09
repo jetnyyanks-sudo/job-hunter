@@ -146,6 +146,24 @@
         "tenant": "athenahealth",
         "server": "wd1",
         "site": "External"
+      },
+      {
+        "name": "Blue Origin",
+        "tenant": "blueorigin",
+        "server": "wd5",
+        "site": "BlueOrigin"
+      },
+      {
+        "name": "Etsy",
+        "tenant": "etsy",
+        "server": "wd5",
+        "site": "Etsy_Careers"
+      },
+      {
+        "name": "BRG (Berkeley Research Group)",
+        "tenant": "thinkbrg",
+        "server": "wd5",
+        "site": "BRG_External_Career_Site"
       }
     ],
     "icims": []
