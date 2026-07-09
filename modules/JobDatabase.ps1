@@ -19,16 +19,20 @@ function Initialize-JobDatabase {
     # For simplicity, we'll use a flat-file approach with JSON as fallback
     # if SQLite assemblies aren't available
 
-    # Try to load SQLite
+    # Try to load SQLite (silently - JSON fallback is fine)
     $sqliteAvailable = $false
-    try {
-        Add-Type -Path "$PSScriptRoot\..\lib\System.Data.SQLite.dll" -ErrorAction Stop
-        $sqliteAvailable = $true
-    }
-    catch {
-        # Try the Microsoft.Data.Sqlite NuGet package
+    $sqlitePath = "$PSScriptRoot\..\lib\System.Data.SQLite.dll"
+    if (Test-Path $sqlitePath) {
         try {
-            Add-Type -AssemblyName "Microsoft.Data.Sqlite" -ErrorAction Stop
+            Add-Type -Path $sqlitePath -ErrorAction SilentlyContinue
+            $sqliteAvailable = $true
+        }
+        catch { }
+    }
+
+    if (-not $sqliteAvailable) {
+        try {
+            [System.Reflection.Assembly]::Load("Microsoft.Data.Sqlite") | Out-Null
             $sqliteAvailable = $true
         }
         catch {
