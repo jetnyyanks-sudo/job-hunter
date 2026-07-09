@@ -45,6 +45,8 @@ $modulesPath = "$scriptRoot\modules"
 . "$modulesPath\Get-SmartRecruiterJobs.ps1"
 . "$modulesPath\Get-WorkdayJobs.ps1"
 . "$modulesPath\Get-ICIMSJobs.ps1"
+. "$modulesPath\Get-RipplingJobs.ps1"
+. "$modulesPath\Get-WorkableJobs.ps1"
 . "$modulesPath\Get-CareerPageJobs.ps1"
 . "$modulesPath\JobDatabase.ps1"
 
@@ -124,6 +126,22 @@ if ($config.companies.icims -and $config.companies.icims.Count -gt 0) {
     $icimsJobs = Get-ICIMSJobs -Companies $config.companies.icims -TitleFilters $titleFilters -Verbose:$isVerbose
     $allJobs += $icimsJobs
     Write-Host "     Found: $($icimsJobs.Count) matching jobs" -ForegroundColor Gray
+}
+
+# --- Rippling ---
+if ($config.companies.rippling -and $config.companies.rippling.Count -gt 0) {
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 🔗 Rippling ($($config.companies.rippling.Count) companies)..." -ForegroundColor White
+    $ripJobs = Get-RipplingJobs -Companies $config.companies.rippling -TitleFilters $titleFilters -Verbose:$isVerbose
+    $allJobs += $ripJobs
+    Write-Host "     Found: $($ripJobs.Count) matching jobs" -ForegroundColor Gray
+}
+
+# --- Workable ---
+if ($config.companies.workable -and $config.companies.workable.Count -gt 0) {
+    Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 📝 Workable ($($config.companies.workable.Count) companies)..." -ForegroundColor White
+    $wkJobs = Get-WorkableJobs -Companies $config.companies.workable -TitleFilters $titleFilters -Verbose:$isVerbose
+    $allJobs += $wkJobs
+    Write-Host "     Found: $($wkJobs.Count) matching jobs" -ForegroundColor Gray
 }
 
 # --- Generic Career Pages ---

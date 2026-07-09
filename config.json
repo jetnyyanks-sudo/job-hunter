@@ -114,6 +114,26 @@
       "collibra",
       "linkedin"
     ],
+    "rippling": [
+      "firehydrant"
+    ],
+    "workable": [
+      "samsara",
+      "navan",
+      "drata",
+      "plaid",
+      "toast",
+      "upstart",
+      "confluent",
+      "docusign",
+      "ironclad",
+      "tanium",
+      "lacework",
+      "moveworks",
+      "nerdwallet",
+      "gusto",
+      "coinbase"
+    ],
     "workday": [
       {
         "name": "Salesforce",
