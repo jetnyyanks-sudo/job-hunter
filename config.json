@@ -188,6 +188,12 @@
         "tenant": "empower",
         "server": "wd12",
         "site": "empower"
+      },
+      {
+        "name": "NBA",
+        "tenant": "nba",
+        "server": "wd108",
+        "site": "nbacareers"
       }
     ],
     "icims": []
