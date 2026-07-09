@@ -41,14 +41,17 @@ function Get-AshbyJobs {
                 $location = if ($job.location) { $job.location } else { "Not specified" }
                 if ($job.isRemote) { $location = "Remote - $location" }
 
-                # Get job details for description
+                # Get job details for description (may fail silently on some boards)
                 $description = ""
                 $detailUrl = "https://api.ashbyhq.com/posting-api/job-board/$company/posting/$($job.id)"
                 try {
-                    $detail = Invoke-RestMethod -Uri $detailUrl -Method Get -ErrorAction Stop
-                    if ($detail.descriptionHtml) {
+                    $detail = Invoke-RestMethod -Uri $detailUrl -Method Get -ErrorAction SilentlyContinue
+                    if ($detail -and $detail.descriptionHtml) {
                         $description = ($detail.descriptionHtml -replace '<[^>]+>', ' ' -replace '\s+', ' ')
                         $description = $description.Substring(0, [Math]::Min(2000, $description.Length))
+                    }
+                    else {
+                        $description = $job.title
                     }
                 }
                 catch {
@@ -84,7 +87,7 @@ function Get-AshbyJobs {
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $company"
         }
         catch {
-            Write-Warning "Failed to fetch Ashby jobs for $company : $_"
+            Write-Warning "Failed to fetch Ashby jobs for $company : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
         Start-Sleep -Milliseconds 500

@@ -77,7 +77,7 @@ function Get-GreenhouseJobs {
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $company"
         }
         catch {
-            Write-Warning "Failed to fetch Greenhouse jobs for $company : $_"
+            Write-Warning "Failed to fetch Greenhouse jobs for $company : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
         # Be polite - don't hammer the API

@@ -188,7 +188,7 @@ function Get-CareerPageJobs {
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $companyName"
         }
         catch {
-            Write-Warning "Failed to fetch career page for $companyName : $_"
+            Write-Warning "Failed to fetch career page for $companyName : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
         # Be polite - 2s between companies (HTML scraping)

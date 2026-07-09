@@ -1,12 +1,15 @@
 ﻿{
+    "_blocked_do_not_readd":  [
+                                  "Dropbox - Cloudflare bot protection (Jul 2026)",
+                                  "ServiceNow - Cloudflare bot protection (Jul 2026)",
+                                  "Palo Alto Networks - 404 + iframe (Jul 2026)",
+                                  "CrowdStrike - JS-only rendering (Jul 2026)",
+                                  "Splunk - Varnish 403 Forbidden (Jul 2026)"
+                              ],
     "companies":  [
                       {
                           "name":  "Stripe",
                           "url":  "https://stripe.com/jobs/search?query=site+reliability"
-                      },
-                      {
-                          "name":  "Dropbox",
-                          "url":  "https://jobs.dropbox.com/all-jobs?query=site+reliability"
                       },
                       {
                           "name":  "Okta",
@@ -23,10 +26,6 @@
                       {
                           "name":  "Dynatrace",
                           "url":  "https://www.dynatrace.com/careers/jobs/?query=site+reliability"
-                      },
-                      {
-                          "name":  "Splunk",
-                          "url":  "https://www.splunk.com/en_us/careers/search-jobs.html?keyword=site+reliability"
                       },
                       {
                           "name":  "Honeycomb",
@@ -135,10 +134,6 @@
                       {
                           "name":  "Sumo Logic",
                           "url":  "https://www.sumologic.com/company/careers/"
-                      },
-                      {
-                          "name":  "CrowdStrike",
-                          "url":  "https://www.crowdstrike.com/careers/?search=site+reliability"
                       },
                       {
                           "name":  "SentinelOne",

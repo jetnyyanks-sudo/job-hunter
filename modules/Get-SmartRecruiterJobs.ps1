@@ -100,7 +100,7 @@ function Get-SmartRecruiterJobs {
                 if ($response.totalFound -le $offset) { $hasMore = $false }
             }
             catch {
-                Write-Warning "Failed to fetch SmartRecruiters jobs for $company : $_"
+                Write-Warning "Failed to fetch SmartRecruiters jobs for $company : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
                 $hasMore = $false
             }
 

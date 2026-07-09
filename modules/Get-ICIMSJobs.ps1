@@ -85,7 +85,7 @@ function Get-ICIMSJobs {
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $companyName"
         }
         catch {
-            Write-Warning "Failed to fetch iCIMS jobs for $companyName : $_"
+            Write-Warning "Failed to fetch iCIMS jobs for $companyName : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
         Start-Sleep -Seconds 2

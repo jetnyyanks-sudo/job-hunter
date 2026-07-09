@@ -85,7 +85,7 @@ function Get-LeverJobs {
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $company"
         }
         catch {
-            Write-Warning "Failed to fetch Lever jobs for $company : $_"
+            Write-Warning "Failed to fetch Lever jobs for $company : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
         Start-Sleep -Milliseconds 500

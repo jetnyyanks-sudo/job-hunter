@@ -49,6 +49,14 @@
     "method": "mcp"
   },
   "companies": {
+    "_blocked_companies_do_not_readd": [
+      "hashicorp - moved off Greenhouse, slug no longer works (Jul 2026)",
+      "servicenow - Cloudflare bot protection blocks all scraping (Jul 2026)",
+      "splunk - Varnish cache returns 403 Forbidden (Jul 2026)",
+      "palo alto networks - career page returns 404, uses iframe + bot protection (Jul 2026)",
+      "target - iCIMS page restructured, returns 404 (Jul 2026)",
+      "saic - Cloudflare bot protection blocks all scraping (Jul 2026)"
+    ],
     "greenhouse": [
       "cloudflare",
       "elastic",
@@ -76,7 +84,6 @@
       "employerdirecthealthcare",
       "elliginthealth",
       "enova",
-      "hashicorp",
       "datadog",
       "gitlab",
       "mongodb"
@@ -119,29 +126,8 @@
       {
         "name": "Intuit",
         "url": "https://jobs.intuit.com/search-jobs/site%20reliability/27595/1"
-      },
-      {
-        "name": "ServiceNow",
-        "url": "https://careers.servicenow.com/jobs/search?q=site+reliability+engineer&location=United+States"
-      },
-      {
-        "name": "Palo Alto Networks",
-        "url": "https://jobs.paloaltonetworks.com/en/jobs/?q=site+reliability+engineer&location=United+States"
-      },
-      {
-        "name": "Splunk",
-        "url": "https://jobs.jobvite.com/splunk-careers/search?q=site+reliability+engineer&l=United+States"
       }
     ],
-    "icims": [
-      {
-        "name": "Target",
-        "url": "https://jobs.target.com/search-jobs/site%20reliability"
-      },
-      {
-        "name": "SAIC",
-        "url": "https://jobs.saic.com/search-jobs/site%20reliability"
-      }
-    ]
+    "icims": []
   }
 }
