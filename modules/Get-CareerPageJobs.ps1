@@ -28,9 +28,10 @@ function Get-CareerPageJobs {
         $companyName = $companyConfig.name
         $url = $companyConfig.url
         Write-Verbose "Fetching career page for: $companyName ($url)"
+        Write-Host "     [$($Companies.IndexOf($companyConfig) + 1)/$($Companies.Count)] $companyName..." -ForegroundColor DarkGray -NoNewline
 
         try {
-            $response = Invoke-WebRequest -Uri $url -Headers $headers -UseBasicParsing -TimeoutSec 15 -MaximumRedirection 5 -ErrorAction Stop
+            $response = Invoke-WebRequest -Uri $url -Headers $headers -UseBasicParsing -TimeoutSec 8 -MaximumRedirection 5 -ErrorAction Stop
             $content = $response.Content
 
             # Strategy 1: Find job links by matching title keywords in anchor text
@@ -186,8 +187,11 @@ function Get-CareerPageJobs {
             }
 
             Write-Verbose "  Found $($allJobs.Count) matching jobs at $companyName"
+            $foundThisCompany = ($allJobs | Where-Object { $_.Company -eq $companyName }).Count
+            Write-Host " $foundThisCompany found" -ForegroundColor $(if ($foundThisCompany -gt 0) { "Green" } else { "DarkGray" })
         }
         catch {
+            Write-Host " FAIL" -ForegroundColor Red
             Write-Warning "Failed to fetch career page for $companyName : $($_.Exception.Message.Substring(0, [Math]::Min(100, $_.Exception.Message.Length)))"
         }
 
