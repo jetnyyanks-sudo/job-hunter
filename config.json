@@ -200,6 +200,12 @@
         "tenant": "stord",
         "server": "wd503",
         "site": "Stord_External_Career"
+      },
+      {
+        "name": "Guidehouse",
+        "tenant": "guidehouse",
+        "server": "wd1",
+        "site": "External"
       }
     ],
     "icims": []
