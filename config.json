@@ -136,16 +136,16 @@
     ],
     "workday": [
       {
-        "name": "Salesforce",
-        "url": "https://careers.salesforce.com/en/jobs/?search=site+reliability+engineer&location=United+States&pagesize=20"
-      },
-      {
         "name": "Capital One",
-        "url": "https://www.capitalonecareers.com/search-jobs/site%20reliability/234/1"
+        "tenant": "capitalone",
+        "server": "wd12",
+        "site": "Capital_One"
       },
       {
-        "name": "Intuit",
-        "url": "https://jobs.intuit.com/search-jobs/site%20reliability/27595/1"
+        "name": "athenahealth",
+        "tenant": "athenahealth",
+        "server": "wd1",
+        "site": "External"
       }
     ],
     "icims": []
