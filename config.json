@@ -182,6 +182,12 @@
         "tenant": "wexinc",
         "server": "wd5",
         "site": "wexinc"
+      },
+      {
+        "name": "Empower",
+        "tenant": "empower",
+        "server": "wd12",
+        "site": "empower"
       }
     ],
     "icims": []
