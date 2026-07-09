@@ -164,6 +164,12 @@
         "tenant": "thinkbrg",
         "server": "wd5",
         "site": "BRG_External_Career_Site"
+      },
+      {
+        "name": "GE HealthCare",
+        "tenant": "healthcare",
+        "server": "wd1",
+        "site": "Search"
       }
     ],
     "icims": []
