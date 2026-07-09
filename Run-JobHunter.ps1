@@ -24,6 +24,12 @@ if (-not $ConfigPath -or $ConfigPath -eq "\config.json") {
     $ConfigPath = "$scriptRoot\config.json"
 }
 
+# Start logging to file
+$logsDir = "$scriptRoot\logs"
+if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Path $logsDir -Force | Out-Null }
+$logFile = "$logsDir\run_$(Get-Date -Format 'yyyy-MM-dd_HHmmss').log"
+Start-Transcript -Path $logFile -Append | Out-Null
+
 # ============================================================
 # LOAD MODULES
 # ============================================================
@@ -227,3 +233,6 @@ Write-Host "══════════════════════�
 
 Write-Host "✅ Job Hunter scrape complete! $(Get-Date -Format 'HH:mm:ss')" -ForegroundColor Green
 Write-Host "   Next step: open Kiro and ask 'score my pending jobs'`n" -ForegroundColor DarkGray
+Write-Host "   Log saved: $logFile" -ForegroundColor DarkGray
+
+Stop-Transcript | Out-Null
