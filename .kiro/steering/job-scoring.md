@@ -19,7 +19,7 @@ For each job, evaluate against the candidate's resume and profile using these we
 - **Title/Level Match (25%)**: Is the title SRE/Reliability/Platform and is the level Principal, Staff, or Senior? Match against the candidate's current and target seniority.
 - **Skills Match (30%)**: How well do the job requirements align with the specific tools, technologies, and experience on the resume? Look for: Dynatrace, Terraform, PagerDuty, Azure DevOps, PowerShell, observability, monitoring, IaC, incident management, and any other skills from the resume.
 - **Salary Fit (20%)**: Always use the salary listed in the job posting if available. If the scraped description includes a salary range, use that exact figure. Only estimate if no salary information is found anywhere in the job data. If listed salary is below $180,000, score this criteria as 0 and note it as a concern in the reason.
-- **Remote/Location (15%)**: Is it remote-friendly or US-based?
+- **Remote/Location (15%)**: Remote is ideal (full score). Seattle/Bellevue WA is local (full score). Hybrid in Seattle area is acceptable. Any other US city that requires relocation should score LOW on this factor (3/15 max) unless the posting explicitly says remote is an option. Non-US locations score 0 and the job gets bucket "skip" automatically.
 - **Company/Growth (10%)**: Reputable company with good engineering culture, 50-10,000 employees?
 
 ## 3. Bucket the results
