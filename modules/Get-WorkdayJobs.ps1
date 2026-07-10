@@ -93,10 +93,9 @@ function Get-WorkdayJobs {
                     if (-not $titleMatch) { continue }
 
                     # Skip if already added (multiple search terms may match same job)
-                    $jobId = "workday_$($tenant)_$($job.bulletFields[0] -replace '[^a-zA-Z0-9]','')"
-                    if ($job.externalPath) {
-                        $jobId = "workday_${tenant}_$($job.externalPath.GetHashCode())"
-                    }
+                    # Use externalPath directly for stable ID (GetHashCode varies across sessions in .NET Core)
+                    $pathSlug = if ($job.externalPath) { $job.externalPath -replace '[^a-zA-Z0-9_-]', '' } else { $job.title -replace '[^a-zA-Z0-9]', '' }
+                    $jobId = "workday_${tenant}_${pathSlug}"
                     if ($allJobs | Where-Object { $_.JobId -eq $jobId }) { continue }
 
                     # Extract location
