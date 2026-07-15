@@ -47,6 +47,7 @@ $modulesPath = "$scriptRoot\modules"
 . "$modulesPath\Get-ICIMSJobs.ps1"
 . "$modulesPath\Get-RipplingJobs.ps1"
 . "$modulesPath\Get-WorkableJobs.ps1"
+. "$modulesPath\Get-JobBoardJobs.ps1"
 . "$modulesPath\Get-CareerPageJobs.ps1"
 . "$modulesPath\JobDatabase.ps1"
 
@@ -143,6 +144,12 @@ if ($config.companies.workable -and $config.companies.workable.Count -gt 0) {
     $allJobs += $wkJobs
     Write-Host "     Found: $($wkJobs.Count) matching jobs" -ForegroundColor Gray
 }
+
+# --- Job Board APIs (RemoteOK, Jobicy) ---
+Write-Host "  [$(Get-Date -Format 'HH:mm:ss')] 📡 Job Boards (RemoteOK, Jobicy)..." -ForegroundColor White
+$jbJobs = Get-JobBoardJobs -TitleFilters $titleFilters -Verbose:$isVerbose
+$allJobs += $jbJobs
+Write-Host "     Found: $($jbJobs.Count) matching jobs" -ForegroundColor Gray
 
 # --- Generic Career Pages ---
 $careerPagesPath = "$scriptRoot\career_pages.json"
