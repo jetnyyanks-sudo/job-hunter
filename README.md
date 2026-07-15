@@ -13,7 +13,7 @@ The system runs in two phases:
 ```
 Task Scheduler (daily 7 AM)
     → Run-JobHunter.ps1
-    → Scrapes 7 sources (6 ATS APIs + generic career pages)
+    → Scrapes 10 sources (8 ATS APIs + job boards + generic career pages)
     → Filters by title/level keywords
     → Deduplicates against previously seen jobs
     → Appends new jobs to data/pending_scoring.json
@@ -109,8 +109,11 @@ Register-ScheduledTask -TaskName "JobHunter" -Action $action -Trigger $trigger -
 | Lever | JSON API | No | config.json |
 | Ashby | JSON API | No | config.json |
 | SmartRecruiters | JSON API | No | config.json |
-| Workday | HTML scraping | No | config.json |
-| iCIMS | HTML scraping | No | config.json |
+| Workday | POST JSON API | No | config.json |
+| Rippling | JSON API | No | config.json |
+| Workable | JSON API | No | config.json |
+| RemoteOK | JSON API | No | built-in |
+| Jobicy | JSON API | No | built-in |
 | Any career page | HTML + JSON-LD | No | career_pages.json |
 
 ## Scoring Criteria
@@ -218,12 +221,15 @@ job-hunter/
     ├── Get-LeverJobs.ps1
     ├── Get-AshbyJobs.ps1
     ├── Get-SmartRecruiterJobs.ps1
-    ├── Get-WorkdayJobs.ps1
+    ├── Get-WorkdayJobs.ps1       # POST JSON API (not HTML scraping)
     ├── Get-ICIMSJobs.ps1
-    ├── Get-CareerPageJobs.ps1  # Generic scraper (any career page)
+    ├── Get-RipplingJobs.ps1
+    ├── Get-WorkableJobs.ps1
+    ├── Get-JobBoardJobs.ps1      # RemoteOK + Jobicy aggregators
+    ├── Get-CareerPageJobs.ps1    # Generic scraper (any career page)
     ├── Export-HtmlReport.ps1
     ├── Send-JobNotification.ps1
-    ├── Invoke-LLMScoring.ps1   # Legacy, not used
+    ├── Invoke-LLMScoring.ps1     # Legacy, not used
     └── JobDatabase.ps1
 
 # Created at runtime (gitignored):
