@@ -66,7 +66,7 @@ function Get-CareerPageJobs {
                         PostedDate  = Get-Date
                         Description = "Career page listing: $jobTitle at $companyName"
                         Salary      = ""
-                        JobId       = "careerpage_$($companyName.ToLower() -replace '[^a-z0-9]','')_$($jobUrl.GetHashCode())"
+                        JobId       = "careerpage_$($companyName.ToLower() -replace '[^a-z0-9]','')_$($jobUrl -replace '[^a-zA-Z0-9]','' | ForEach-Object { $_.Substring([Math]::Max(0,$_.Length-40)) })"
                     }
                 }
             }
@@ -116,7 +116,7 @@ function Get-CareerPageJobs {
                             PostedDate  = if ($posting.datePosted) { try { [datetime]$posting.datePosted } catch { Get-Date } } else { Get-Date }
                             Description = if ($posting.description) { ($posting.description -replace '<[^>]+>', ' ' -replace '\s+', ' ').Substring(0, [Math]::Min(2000, $posting.description.Length)) } else { "" }
                             Salary      = $salary
-                            JobId       = "careerpage_$($companyName.ToLower() -replace '[^a-z0-9]','')_$($posting.title.GetHashCode())"
+                            JobId       = "careerpage_$($companyName.ToLower() -replace '[^a-z0-9]','')_$($posting.title.ToLower() -replace '[^a-z0-9]','')"
                         }
                     }
                 } catch { }
