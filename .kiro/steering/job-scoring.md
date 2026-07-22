@@ -12,6 +12,15 @@ First, read `resume.md` to understand the candidate's full experience, skills, c
 
 Then read `data/pending_scoring.json`. It contains a `profile` object (high-level preferences) and a `jobs` array.
 
+## 1b. Supplement with web search (optional, recommended weekly)
+
+Before scoring, run a quick web search via Composio to find jobs the scraper might have missed. Use queries like:
+- `"Site Reliability Engineer" OR "SRE" OR "Platform Engineer" remote United States 2026`
+- `"Principal SRE" OR "Staff SRE" remote Seattle 2026`
+- `site:linkedin.com/jobs "Site Reliability Engineer" remote`
+
+If any results look like real job postings not already in the pending queue, add them manually to scoring. This catches LinkedIn-only postings and jobs from companies not in the scraper config.
+
 ## 2. Score each job 1-100
 
 For each job, evaluate against the candidate's resume and profile using these weighted criteria:

@@ -13,6 +13,14 @@
       "autoApprove": [
         "create_or_update_file"
       ]
+    },
+    "composio": {
+      "url": "https://connect.composio.dev/mcp",
+      "headers": {
+        "x-consumer-api-key": "${COMPOSIO_DEV_API_KEY}"
+      },
+      "disabled": false,
+      "autoApprove": []
     }
   }
 }
