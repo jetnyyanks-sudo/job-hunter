@@ -21,6 +21,8 @@ Before scoring, run a quick web search via Composio to find jobs the scraper mig
 
 If any results look like real job postings not already in the pending queue, add them manually to scoring. This catches LinkedIn-only postings and jobs from companies not in the scraper config.
 
+**IMPORTANT: Web search results may include expired/stale jobs.** Always note in the email that web search finds (marked with 🌐) should be verified as still active before applying. If the posting page says "removed" or "no longer available," skip it.
+
 ## 2. Score each job 1-100
 
 For each job, evaluate against the candidate's resume and profile using these weighted criteria:
